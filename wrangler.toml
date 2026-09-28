@@ -1,0 +1,16 @@
+# Shared h93lab report Worker (all apps). Deployed by Cloudflare Workers Builds
+# from this repo. Replace <KV_NAMESPACE_ID> with the id of the REPORTS KV
+# namespace (Cloudflare dashboard -> Storage & Databases -> KV).
+
+name = "h93lab-report"
+main = "index.ts"
+compatibility_date = "2026-09-25"
+
+# Reports and per-IP rate-limit counters share this namespace (distinct key
+# prefixes).
+[[kv_namespaces]]
+binding = "REPORTS"
+id = "<KV_NAMESPACE_ID>"
+
+# RATE_SALT is a secret, never committed. Set it in the dashboard:
+#   Worker -> Settings -> Variables and Secrets -> Add -> Secret -> RATE_SALT
