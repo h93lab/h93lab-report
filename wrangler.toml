@@ -10,7 +10,7 @@ compatibility_date = "2026-09-25"
 # prefixes).
 [[kv_namespaces]]
 binding = "REPORTS"
-id = "<KV_NAMESPACE_ID>"
+id = "f2a93085ca724435bc5370c58bc11842"
 
 # RATE_SALT is a secret, never committed. Set it in the dashboard:
 #   Worker -> Settings -> Variables and Secrets -> Add -> Secret -> RATE_SALT
